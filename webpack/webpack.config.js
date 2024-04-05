@@ -1,5 +1,7 @@
 const path = require("path");
 const fs = require("fs");
+const Dotenv = require('dotenv-webpack');
+const { plugins } = require("@babel/preset-env/lib/plugins-compat-data");
 
 function getEntryPoints(directory) {
   const entries = {};
@@ -46,4 +48,7 @@ module.exports = {
       },
     ],
   },
+  plugins:[
+    new Dotenv()
+  ]
 };
