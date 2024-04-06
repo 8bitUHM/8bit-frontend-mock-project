@@ -10,8 +10,8 @@ const ProgrammingLanguages = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const username = 'admin'
-        const password = 'admin'
+        const username = 'apiUser'
+        const password = 'apiPassword'
         const encodedCredentials = btoa(`${username}:${password}`);
         console.log(username,password)
 
