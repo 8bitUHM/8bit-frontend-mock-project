@@ -10,8 +10,8 @@ const ProgrammingLanguages = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const username = process.env.MOCK_API_USERNAME;
-        const password = process.env.MOCK_API_PASSWORD;
+        const username = 'admin'
+        const password = 'admin'
         const encodedCredentials = btoa(`${username}:${password}`);
         console.log(username,password)
 
