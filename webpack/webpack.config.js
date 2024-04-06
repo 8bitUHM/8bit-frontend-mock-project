@@ -22,7 +22,7 @@ module.exports = {
   entry: getEntryPoints("./src/webpack-render"),
   output: {
     filename: "[name].js",
-    path: path.resolve(__dirname, "../dist"),
+    path: path.resolve(__dirname, "../project/dist"),
   },
   resolve: {
     extensions: [".tsx", ".ts", ".js", ".json"],
