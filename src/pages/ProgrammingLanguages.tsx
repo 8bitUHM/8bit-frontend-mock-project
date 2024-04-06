@@ -13,6 +13,7 @@ const ProgrammingLanguages = () => {
         const username = process.env.MOCK_API_USERNAME;
         const password = process.env.MOCK_API_PASSWORD;
         const encodedCredentials = btoa(`${username}:${password}`);
+        console.log(username,password)
 
         const headers = new Headers();
         headers.append("Authorization", `Basic ${encodedCredentials}`);
