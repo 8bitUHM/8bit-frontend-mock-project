@@ -59,9 +59,9 @@ const ProgrammingLanguages = () => {
                   {item.short_description}
                 </p>
                 <hr />
-                <div className="row justify-content-evenly pt-2">
+                <div className="row justify-content-start pt-2">
                   {item.images.map((image: Image, index: number) => (
-                    <div key={index} className="col-12">
+                    <div key={index} className="col-12 col-md-6">
                       <LoadingImage
                         imageUri={image.image}
                         className="img-fluid shadow-lg mb-5 bg-body rounded w-100"
