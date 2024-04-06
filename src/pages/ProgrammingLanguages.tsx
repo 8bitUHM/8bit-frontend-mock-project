@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import LoadingImage from "../components/LoadingImage";
 
 const ProgrammingLanguages = () => {
-  const [lanaguageData, setLanguageData] = useState([]);
+  const [languageData, setLanguageData] = useState([]);
   const [pageReady, setPageReady] = useState(false);
   const [canMap, setCanMap] = useState(false);
 
@@ -40,7 +40,7 @@ const ProgrammingLanguages = () => {
     <>
       <div className="container text-left my-5">
         {canMap ? (
-          lanaguageData.map((item, index) => (
+          languageData.map((item, index) => (
             <div key={index} className="card mb-3">
               <div className="card-body">
                 <h3 className="card-subtitle">{item.name}</h3>
