@@ -22,7 +22,7 @@ const Index = () => {
                   <div>
                     <p className="h2">Leighton Miguel</p>
                     <p className="lead">
-                      Click the button below to view the some programming
+                      Click the button below to view some programming
                       languages.
                     </p>
                   </div>
