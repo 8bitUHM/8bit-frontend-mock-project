@@ -23,7 +23,6 @@ const ProgrammingLanguages = () => {
         const username = "apiUser";
         const password = "apiPassword";
         const encodedCredentials = btoa(`${username}:${password}`);
-        console.log(username, password);
 
         const headers = new Headers();
         headers.append("Authorization", `Basic ${encodedCredentials}`);
