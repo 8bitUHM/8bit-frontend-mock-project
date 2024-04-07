@@ -3,14 +3,14 @@ import { useState, useEffect, FC } from "react";
 import LoadingImage from "../components/LoadingImage";
 import Navbar from "../components/Navbar";
 
-interface Image {
+interface MiscImage {
   image: string;
 }
 
 interface LanguageItem {
   name: string;
   short_description: string;
-  images: Image[];
+  images: MiscImage[];
 }
 
 const ProgrammingLanguages = () => {
@@ -47,32 +47,36 @@ const ProgrammingLanguages = () => {
     fetchData();
   }, []);
 
+  const mapData = () => {
+    return languageData.map((item: LanguageItem, index: number) => (
+      <div key={index} className="card mb-3">
+        <div className="card-body">
+          <h3 className="card-subtitle">{item.name}</h3>
+          <p className="card-subtitle py-1" style={{ color: "grey" }}>
+            {item.short_description}
+          </p>
+          <hr />
+          <div className="row justify-content-start pt-2">
+            {item.images.map((image: MiscImage, index: number) => (
+              <div key={index} className="col-12 col-md-6">
+                <LoadingImage
+                  imageUri={image.image}
+                  className="img-fluid shadow-lg mb-5 bg-body rounded w-100"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    ));
+  };
+
   return pageReady ? (
     <>
-      <Navbar/>
-      <div className="container text-left my-5" style={{paddingTop:100}}>
+      <Navbar />
+      <div className="container text-left my-5" style={{ paddingTop: 100 }}>
         {canMap ? (
-          languageData.map((item: LanguageItem, index: number) => (
-            <div key={index} className="card mb-3">
-              <div className="card-body">
-                <h3 className="card-subtitle">{item.name}</h3>
-                <p className="card-subtitle py-1" style={{ color: "grey" }}>
-                  {item.short_description}
-                </p>
-                <hr />
-                <div className="row justify-content-start pt-2">
-                  {item.images.map((image: Image, index: number) => (
-                    <div key={index} className="col-12 col-md-6">
-                      <LoadingImage
-                        imageUri={image.image}
-                        className="img-fluid shadow-lg mb-5 bg-body rounded w-100"
-                      />
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          ))
+          mapData()
         ) : (
           <div>
             Uh oh! Something went wrong with our request for data. Please
@@ -83,8 +87,11 @@ const ProgrammingLanguages = () => {
     </>
   ) : (
     <>
-      <Navbar/>
-      <div className="d-flex justify-content-center" style={{paddingTop:100}}>
+      <Navbar />
+      <div
+        className="d-flex justify-content-center"
+        style={{ paddingTop: 100 }}
+      >
         <div className="spinner-border my-5"></div>
       </div>
     </>
