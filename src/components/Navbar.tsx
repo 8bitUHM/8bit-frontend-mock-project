@@ -4,7 +4,7 @@ import { FC } from "react";
 const Navbar: FC = () => {
   return (
     <>
-      <div className="navbar fixed-top navbar-expand-xl border-bottom bg-white">
+      <div className="navbar fixed-top navbar-expand-md border-bottom bg-white">
         <div className="container">
           <a href="./" className="navbar-brand">
             <img

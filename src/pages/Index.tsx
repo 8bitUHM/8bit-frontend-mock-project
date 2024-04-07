@@ -32,7 +32,7 @@ const Index = () => {
                 <div className="lc-block">
                   <a
                     className="btn btn-primary"
-                    href="programming-languages.html"
+                    href="./programming-languages.html"
                     role="button"
                     style={{ backgroundColor: "#1a7e9c" }}
                   >
