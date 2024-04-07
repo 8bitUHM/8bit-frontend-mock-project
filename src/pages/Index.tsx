@@ -1,10 +1,12 @@
 import * as React from "react";
-import ExampleComponent from "../components/ExampleComponent";
+import Navbar from "../components/Navbar";
 
 const Index = () => {
+ 
   return (
     <>
-      <div className="container text-left">
+     <Navbar/>
+      <div className="container text-left" style={{paddingTop:100}}>
         <section className="py-6" style={{ marginTop: "15%" }}>
           <div
             className="container min-vh-50 py-6 d-flex justify-content-center align-items-center"

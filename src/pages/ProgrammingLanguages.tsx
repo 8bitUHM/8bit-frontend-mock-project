@@ -1,6 +1,7 @@
 import * as React from "react";
 import { useState, useEffect, FC } from "react";
 import LoadingImage from "../components/LoadingImage";
+import Navbar from "../components/Navbar";
 
 interface Image {
   image: string;
@@ -48,7 +49,8 @@ const ProgrammingLanguages = () => {
 
   return pageReady ? (
     <>
-      <div className="container text-left my-5">
+      <Navbar/>
+      <div className="container text-left my-5" style={{paddingTop:100}}>
         {canMap ? (
           languageData.map((item: LanguageItem, index: number) => (
             <div key={index} className="card mb-3">
@@ -80,9 +82,12 @@ const ProgrammingLanguages = () => {
       </div>
     </>
   ) : (
-    <div className="d-flex justify-content-center">
-      <div className="spinner-border my-5"></div>
-    </div>
+    <>
+      <Navbar/>
+      <div className="d-flex justify-content-center" style={{paddingTop:100}}>
+        <div className="spinner-border my-5"></div>
+      </div>
+    </>
   );
 };
 
