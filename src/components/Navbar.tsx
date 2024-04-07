@@ -8,7 +8,7 @@ const Navbar: FC = () => {
         className="navbar fixed-top navbar-expand-xl border-bottom bg-white"
       >
         <div className="container">
-          <a href="/project" className="navbar-brand">
+          <a href="./" className="navbar-brand">
             <img
               src="./assets/8bit_logo.webp"
               height="65"
@@ -28,13 +28,13 @@ const Navbar: FC = () => {
           <div className="collapse navbar-collapse" id="nav">
             <ul className="navbar-nav navbar-right pt-2">
               <li className="nav-item">
-                <a href="/project" className="nav-link">
+                <a href="./" className="nav-link">
                   Home
                 </a>
               </li>
 
               <li className="nav-item">
-                <a href="/project/programming-languages.html" className="nav-link">
+                <a href="./programming-languages.html" className="nav-link">
                   Programming Languages
                 </a>
               </li>
