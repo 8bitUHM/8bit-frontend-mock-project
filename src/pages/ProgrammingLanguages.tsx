@@ -2,6 +2,7 @@ import * as React from "react";
 import { useState, useEffect, FC } from "react";
 import LoadingImage from "../components/LoadingImage";
 import Navbar from "../components/Navbar";
+import { createRoot } from "react-dom/client";
 
 interface MiscImage {
   image: string;
@@ -99,3 +100,5 @@ const ProgrammingLanguages = () => {
 };
 
 export default ProgrammingLanguages;
+const root = document.getElementById("root");
+createRoot(root).render(<ProgrammingLanguages />);
