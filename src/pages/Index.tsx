@@ -1,5 +1,6 @@
 import * as React from "react";
 import Navbar from "../components/Navbar";
+import { createRoot } from "react-dom/client";
 
 const Index = () => {
  
@@ -49,3 +50,5 @@ const Index = () => {
 };
 
 export default Index;
+const root = document.getElementById("root");
+createRoot(root).render(<Index />);

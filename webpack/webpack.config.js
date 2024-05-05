@@ -19,7 +19,7 @@ function getEntryPoints(directory) {
 }
 
 module.exports = {
-  entry: getEntryPoints("./src/webpack-render"),
+  entry: getEntryPoints("./src/pages"),
   output: {
     filename: "[name].js",
     path: path.resolve(__dirname, "../project/dist"),
